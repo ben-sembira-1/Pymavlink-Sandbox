@@ -1,3 +1,6 @@
+# Output of a first time ardupilot base image build
+temp_ardupilot_repo-*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
