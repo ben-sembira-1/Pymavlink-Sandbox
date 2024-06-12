@@ -12,6 +12,6 @@ RUN git checkout ${ARDUPILOT_TAG} && git submodule update
 
 RUN ./waf configure --board sitl && ./waf copter
 
-WORKDIR /pilot
+WORKDIR /home/ardupilot
 
-ENTRYPOINT [ "/ardupilot_entrypoint.sh", "/ardupilot-repo/Tools/autotest/sim_vehicle.py" ]
+ENTRYPOINT [ "/ardupilot_entrypoint.sh", "/ardupilot-repo/Tools/autotest/sim_vehicle.py", "--no-rebuild" ]
