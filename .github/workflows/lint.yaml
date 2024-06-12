@@ -3,7 +3,7 @@ name: lint
 on: [pull_request, push]
 
 jobs:
-  pre-commit:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

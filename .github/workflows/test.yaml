@@ -3,14 +3,13 @@ name: test
 on: [pull_request, push]
 
 jobs:
-  pytest-template:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
-      - name: install package
-        run:
-          - cd projects/template
-          - pip install .
-      - name: run pytest
-        run: pytest
+      - name: install and test
+        run: |
+          cd projects/template
+          pip install .
+          pytest
